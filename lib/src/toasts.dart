@@ -318,15 +318,9 @@ class StyledToast extends StatelessWidget {
 
     final ThemeData inverseTheme = ThemeData(
       brightness: brightness,
-      backgroundColor: themeBackgroundColor,
       colorScheme: ColorScheme(
         primary: colorScheme.onPrimary,
-        primaryVariant: colorScheme.onPrimary,
-        // For the button color, the spec says it should be primaryVariant, but for
-        // backward compatibility on light themes we are leaving it as secondary.
-        secondary:
-            isThemeDark ? colorScheme.primaryVariant : colorScheme.secondary,
-        secondaryVariant: colorScheme.onSecondary,
+        secondary: isThemeDark ? colorScheme.primary : colorScheme.secondary,
         surface: colorScheme.onSurface,
         background: themeBackgroundColor,
         error: colorScheme.onError,
