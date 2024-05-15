@@ -351,7 +351,7 @@ class StyledToast extends StatelessWidget {
               child: DefaultTextStyle(
                 child: child!,
                 style: theme.snackBarTheme.contentTextStyle ??
-                    inverseTheme.textTheme.subtitle1!,
+                    inverseTheme.textTheme.headlineSmall!,
                 textAlign: TextAlign.center,
               ),
             ),
